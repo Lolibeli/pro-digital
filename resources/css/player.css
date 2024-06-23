@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1d1f20, #111);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
+}
+.player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: slideUp 1s ease-in-out;
+}
+.album-art {
+    width: 300px;
+    height: 300px;
+    background: url('/images/album-art.jpeg') no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+.track-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.track-info h2 {
+    font-size: 24px;
+    margin: 0;
+}
+.track-info p {
+    font-size: 18px;
+    margin: 5px 0 0;
+    color: #bbb;
+}
+.progress-bar {
+    width: 80%;
+    height: 10px;
+    background: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.progress {
+    width: 0;
+    height: 100%;
+    background: #1db954;
+    transition: width 0.2s ease-in-out;
+}
+.controls {
+    display: flex;
+    align-items: center;
+}
+.control-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: transform 0.2s ease;
+}
+
+.control-button.play-pause {
+    margin-right: 20px;
+}
+
+.control-button.stop {
+    margin-left: 20px;
+}
+
+.control-button:hover {
+    transform: scale(1.2);
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideUp {
+    from { transform: translateY(20px); }
+    to { transform: translateY(0); }
+}
